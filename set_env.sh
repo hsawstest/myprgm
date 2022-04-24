@@ -1,1 +1,1 @@
-echo "def var1='hsawstest'"
+echo "var1='hsawstest'"
