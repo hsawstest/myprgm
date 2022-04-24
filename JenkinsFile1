@@ -8,7 +8,7 @@ pipeline {
             }
         stage ('Set Environment') {
             steps {
-                sh set_env.sh
+                sh "sh set_env.sh"
             }
         }
     }
