@@ -1,0 +1,15 @@
+currentBuild.displayName = "TEST BUILD"+currentBuild.number
+pipeline {
+    agent any
+    stages {
+        stage ('Hello') {
+            steps {
+                echo 'Hello World'
+            }
+        stage ('Set Environment') {
+            steps {
+                sh set_env.sh
+            }
+        }
+    }
+}
