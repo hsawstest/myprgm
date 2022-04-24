@@ -10,7 +10,7 @@ pipeline {
         stage ('Set Environment') {
             steps {
                 sh "sh set_env.sh"
-                echo $(pwd)
+                sh "echo $(var1)"
                 }
             }
     }
