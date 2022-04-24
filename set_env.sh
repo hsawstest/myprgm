@@ -1,1 +1,1 @@
-echo "export var1='hsawstest'"
+echo "def var1='hsawstest'"
