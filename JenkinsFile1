@@ -2,7 +2,9 @@ currentBuild.displayName = "TEST BUILD"+currentBuild.number
 pipeline {
     agent any
     environment {
-        sh "sh set_env.sh"
+        def var1="i am a variable"
+        def var2="hsawstest"
+        properties([pipelineTriggers([githubPush()])])
     }
     stages {
         stage ('Hello') {
@@ -13,7 +15,7 @@ pipeline {
         stage ('Set Environment') {
             steps {
                 echo "${var1}"
-                sh "echo `pwd`"
+                echo "${var2}"
                 }
             }
     }
