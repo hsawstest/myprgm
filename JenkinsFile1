@@ -1,10 +1,10 @@
 currentBuild.displayName = "TEST BUILD"+currentBuild.number
+properties([pipelineTriggers([githubPush()])])
 pipeline {
     agent any
     environment {
         def var1="i am a variable"
         def var2="hsawstest"
-        properties([pipelineTriggers([githubPush()])])
     }
     stages {
         stage ('Hello') {
