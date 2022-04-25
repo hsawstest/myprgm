@@ -1,9 +1,5 @@
 currentBuild.displayName = "TEST BUILD"+currentBuild.number
 properties([pipelineTriggers([githubPush()])])
-parameters {
-  credentials credentialType: 'com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl', defaultValue: 'githubcred', name: 'gitcred', required: false
-}
-
 pipeline {
     agent any
     environment {
