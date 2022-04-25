@@ -19,5 +19,14 @@ pipeline {
                 echo "${var2}"
                 }
             }
+        stage("Checkout Code") {
+            steps {
+            script {
+                git branch: "master",
+                    credentialsId: 'hsawstest',
+                    url: 'https://github.com/hsawstest/myprgm.git'
+                    }
+                }
+         }
     }
 }
